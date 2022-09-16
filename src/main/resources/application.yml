@@ -1,0 +1,26 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name: authentication-authorization-service
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    username: root
+    password: my-secret-pw
+    dbCreate: update
+    url: jdbc:mysql://localhost:3306/maveric_bank_app
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+
+jwt:
+  secret: secretkey
+  token:
+    validity: 180000
+
